@@ -22,7 +22,8 @@ def check(url, fp):
 		try:
 			if count >= 5:
 				break
-			pro = {"https":"http://127.0.0.1:8080"}
+			pro = {}
+			#pro = {"https":"http://127.0.0.1:8080"}
 			r = requests.get(url, headers = headers, timeout = 10, proxies = pro, verify = False)
 			mycheck(r, url, fp)
 			break
